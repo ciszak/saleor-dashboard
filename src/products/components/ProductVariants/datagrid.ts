@@ -134,9 +134,11 @@ export const useAttributesAdapter = ({
       return false;
     }
 
-    return [AttributeInputTypeEnum.DROPDOWN, AttributeInputTypeEnum.PLAIN_TEXT].includes(
-      attribute.inputType,
-    );
+    return [
+      AttributeInputTypeEnum.DROPDOWN,
+      AttributeInputTypeEnum.SWATCH,
+      AttributeInputTypeEnum.PLAIN_TEXT,
+    ].includes(attribute.inputType);
   });
   const [attributeQuery, setAttributeQuery] = React.useState("");
   const { paginate, currentPage, changeCurrentPage } = useClientPagination();

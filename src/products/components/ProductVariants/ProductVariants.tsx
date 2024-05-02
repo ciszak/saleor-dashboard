@@ -81,7 +81,8 @@ export const ProductVariants: React.FC<ProductVariantsProps> = ({
               ?.filter(
                 attribute =>
                   attribute.inputType === AttributeInputTypeEnum.DROPDOWN ||
-                  attribute.inputType === AttributeInputTypeEnum.PLAIN_TEXT,
+                  attribute.inputType === AttributeInputTypeEnum.PLAIN_TEXT ||
+                  attribute.inputType === AttributeInputTypeEnum.SWATCH,
               )
               .map(attribute => `attribute:${attribute.id}`) ?? []),
           ]
